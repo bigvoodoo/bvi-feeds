@@ -4,9 +4,9 @@
  * Plugin URI: https://github.com/bigvoodoo/bvi-feeds
  * Description: Simple tool for adding client side social media and RSS widgets.
  * Author: Big Voodoo Interactive
- * Version: 4.0.0
+ * Version: 4.1.0
  * Author URI: http://www.bigvoodoo.com
- * GitHub Plugin URI: https://github.com/bigvoodoo/bvi-mega-menu
+ * GitHub Plugin URI: https://github.com/bigvoodoo/bvi-feeds
  * 
  * @author Christina Gleason <tina@bigvoodoo.com>
  * @author Joey Line

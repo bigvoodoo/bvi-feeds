@@ -34,9 +34,11 @@ class WP_Widget_SM_RSS_Feed extends WP_Widget {
 			wp_deregister_script( 'moment.js' );
 			wp_register_script( 'sm-rss-feed', plugins_url( 'assets/js/sm-rss-feed.js', __FILE__ ), array( 'jquery' ), false, true );
 			wp_register_script( 'moment.js', plugins_url( 'assets/js/moment.js', __FILE__ ), array( 'jquery' ), false, true );
+			wp_register_script( 'moment-strftime.js', plugins_url( 'assets/js/moment-strftime.js', __FILE__ ), array( 'moment.js' ), false, true );
 			wp_enqueue_script( 'jquery' );
 			wp_enqueue_script( 'sm-rss-feed' );
 			wp_enqueue_script( 'moment.js' );
+			wp_enqueue_script( 'moment-strftime.js' );
 
 			if( strpos( $instance['template'], '{player}' ) !== false ) {
 				wp_enqueue_script( 'wp-mediaelement', false, array(), false, true );
