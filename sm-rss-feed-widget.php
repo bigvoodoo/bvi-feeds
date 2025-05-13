@@ -71,51 +71,63 @@ class WP_Widget_SM_RSS_Feed extends WP_Widget {
 		$proxy = isset( $instance['proxy'] ) ? (bool) $instance['proxy'] : false;
 
 		?>
-		<p>NOTE: this requires either that the feed is a JSON-encoded version of the feed (possibly with the plugin <a href="http://wordpress.org/plugins/feed-json/">Feed JSON</a>), or that proxying be enabled.</p>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Feed URL:' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>" name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo esc_attr( $url ); ?>" />
-		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'proxy' ); ?>">
-				<input id="<?php echo $this->get_field_id( 'proxy' ); ?>" name="<?php echo $this->get_field_name( 'proxy' ); ?>" type="checkbox" value="1"<?php echo $proxy ? ' checked="checked"' : ''; ?> />
-				<?php _e( 'Proxy this feed?' ); ?>
-			</label>
-		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'num_posts' ); ?>"><?php _e( 'Number of Posts:' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'num_posts' ); ?>" name="<?php echo $this->get_field_name( 'num_posts' ); ?>" type="number" value="<?php echo esc_attr( $num_posts ); ?>" />
-		</p>
-		<p>
-			<label for="<?php echo $this->get_field_id( 'template' ); ?>"><?php _e( 'Template:' ); ?></label>
-			<textarea class="widefat" id="<?php echo $this->get_field_id( 'template' ); ?>" name="<?php echo $this->get_field_name( 'template' ); ?>" style="height:200px;"><?php echo esc_attr( $template ); ?></textarea>
-		</p>
-		<span class="description" style="display:block;">
-			Possible templating replacements (so far):
-			<dl>
-				<dt>{index}</dt>
-				<dd>The index of the entry, starting at 1</dd>
-				<dt>{title}</dt>
-				<dd>The title of the entry</dd>
-				<dt>{author}</dt>
-				<dd>The author of the entry</dd>
-				<dt>{timestamp-###}</dt>
-				<dd>The timestamp of the entry, formatted according to ### using <a href="http://momentjs.com/docs/#/displaying/format/" target="_blank">moment.js</a> or <a href="http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html" target="_blank">strftime standards</a> (strftime has fewer options but is easier to read, and most existing sites use it).</dd>
-				<dt>{link}</dt>
-				<dd>The &lt;a&gt; link to the entry</dd>
-				<dt>{/link}</dt>
-				<dd>The &lt;/a&gt; end of link to the entry</dd>
-				<dt>{content}</dt>
-				<dd>The full content of the entry</dd>
-				<dt>{content-###}</dt>
-				<dd>The content of the entry, trimmed to about ### characters (e.g. {content-200})</dd>
-				<dt>{duration}</dt>
-				<dd>The duration of the track (for podcasts only)</dd>
-				<dt>{player}</dt>
-				<dd>The audio player (for podcasts only)</dd>
-			</dl>
-		</span>
-		<?php
+<p>NOTE: this requires either that the feed is a JSON-encoded version of the feed (possibly with the plugin <a
+        href="http://wordpress.org/plugins/feed-json/">Feed JSON</a>), or that proxying be enabled.</p>
+<p>
+    <label for="<?php echo $this->get_field_id( 'url' ); ?>"><?php _e( 'Feed URL:' ); ?></label>
+    <input class="widefat" id="<?php echo $this->get_field_id( 'url' ); ?>"
+        name="<?php echo $this->get_field_name( 'url' ); ?>" type="text" value="<?php echo esc_attr( $url ); ?>" />
+</p>
+<p>
+    <label for="<?php echo $this->get_field_id( 'proxy' ); ?>">
+        <input id="<?php echo $this->get_field_id( 'proxy' ); ?>" name="<?php echo $this->get_field_name( 'proxy' ); ?>"
+            type="checkbox" value="1" <?php echo $proxy ? ' checked="checked"' : ''; ?> />
+        <?php _e( 'Proxy this feed?' ); ?>
+    </label>
+</p>
+<p>
+    <label for="<?php echo $this->get_field_id( 'num_posts' ); ?>"><?php _e( 'Number of Posts:' ); ?></label>
+    <input class="widefat" id="<?php echo $this->get_field_id( 'num_posts' ); ?>"
+        name="<?php echo $this->get_field_name( 'num_posts' ); ?>" type="number"
+        value="<?php echo esc_attr( $num_posts ); ?>" />
+</p>
+<p>
+    <label for="<?php echo $this->get_field_id( 'template' ); ?>"><?php _e( 'Template:' ); ?></label>
+    <textarea class="widefat" id="<?php echo $this->get_field_id( 'template' ); ?>"
+        name="<?php echo $this->get_field_name( 'template' ); ?>"
+        style="height:200px;"><?php echo esc_attr( $template ); ?></textarea>
+</p>
+<span class="description" style="display:block;">
+    Possible templating replacements (so far):
+    <dl>
+        <dt>{index}</dt>
+        <dd>The index of the entry, starting at 1</dd>
+        <dt>{title}</dt>
+        <dd>The title of the entry</dd>
+        <dt>{author}</dt>
+        <dd>The author of the entry</dd>
+        <dt>{timestamp-###}</dt>
+        <dd>The timestamp of the entry, formatted according to ### using <a
+                href="http://momentjs.com/docs/#/displaying/format/" target="_blank">moment.js</a> or <a
+                href="http://pubs.opengroup.org/onlinepubs/007908799/xsh/strftime.html" target="_blank">strftime
+                standards</a> (strftime has fewer options but is easier to read, and most existing sites use it).</dd>
+        <dt>{link}</dt>
+        <dd>The &lt;a&gt; link to the entry</dd>
+        <dt>{/link}</dt>
+        <dd>The &lt;/a&gt; end of link to the entry</dd>
+        <dt>{image}</dt>
+        <dd>The featured image set for the entry</dd>
+        <dt>{content}</dt>
+        <dd>The full content of the entry</dd>
+        <dt>{content-###}</dt>
+        <dd>The content of the entry, trimmed to about ### characters (e.g. {content-200})</dd>
+        <dt>{duration}</dt>
+        <dd>The duration of the track (for podcasts only)</dd>
+        <dt>{player}</dt>
+        <dd>The audio player (for podcasts only)</dd>
+    </dl>
+</span>
+<?php
 	}
 
 	/**
@@ -259,15 +271,19 @@ class WP_Widget_SM_RSS_Feed extends WP_Widget {
 
 		// Wherever it came from, let's set up our data
 		// to be used by jQuery on the front end
-
 		$output = array();
 		foreach ( $data as $post ) {
+            // configure the featured image tag
+            $img_id = $post['featured_media'];
+            $img = wp_get_attachment_image_src( $img_id, 'full' );
+
 			$output[] = array(
 				'title' => $post['title']['rendered'],
 				'link' => $post['link'],
 				'date' => $post['date'],
 				'content' => $post['excerpt']['rendered'],
 				'author' => $post['_embedded']['author'][0]['name'],
+                'image' => $img[0]
 			);
 		}
 
