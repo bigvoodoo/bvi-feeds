@@ -33,6 +33,7 @@ jQuery(function ($) {
                     }
 
                     var content = sm_rss_clean_content(entry.content);
+                    var title = sm_rss_clean_content(entry.title);
                     var link = entry.permalink || entry.link;
 
                     var matches = link.match(urlPattern);
@@ -49,13 +50,13 @@ jQuery(function ($) {
                             '<img src="' +
                             entry.image +
                             '" alt="' +
-                            entry.title +
+                            title +
                             '" />';
                     }
 
                     var html = template
                         .replace(/\{index\}/g, index + 1)
-                        .replace(/\{title\}/g, entry.title)
+                        .replace(/\{title\}/g, title)
                         .replace(/\{author\}/g, entry.author)
                         .replace(
                             /\{timestamp-([^\}]+)\}/g,
