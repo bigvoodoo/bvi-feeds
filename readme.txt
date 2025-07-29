@@ -37,6 +37,10 @@ License: [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 
 == Changelog ==
 
+= 4.2.0 =
+
+* Adds support for blog feed images to RSS widget
+
 = 4.1.1 =
 
 * Removed sourcemap reference in moment.js compiled library
