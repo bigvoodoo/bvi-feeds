@@ -1,13 +1,12 @@
 === BVI Feeds ===
 Contributors: bigvoodoo, firejdl, geekmenina
 Tags: feeds, rss, social media, admin, shortcode
-Requires at least: 5.0.0
-Tested up to: 5.6.3
+Requires at least: 6.9
+Tested up to: 7.0
+Requires PHP: 8.2
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-TODO
 
 == Description ==
 
@@ -17,18 +16,7 @@ License: [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 
 = Requirements =
 
-* WordPress 5+
-* PHP 7+
 * [SimpleXML](http://us1.php.net/manual/en/book.simplexml.php)
-
-= TODO =
-
-* improve documentation (including this document)
-* i18n/L10n
-
-= Inspirations & Thanks =
-
-* [Big Voodoo Interactive](http://www.bigvoodoo.com) for letting us write and open-source this plugin :)
 
 == Installation ==
 
@@ -36,6 +24,10 @@ License: [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 1. Create widgets!
 
 == Changelog ==
+
+= 4.2.1 =
+
+* Tests against WordPress 7.0
 
 = 4.2.0 =
 

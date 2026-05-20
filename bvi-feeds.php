@@ -1,15 +1,20 @@
 <?php
+
 /**
- * Plugin Name: BVI Feeds
- * Plugin URI: https://github.com/bigvoodoo/bvi-feeds
- * Description: Simple tool for adding client side social media and RSS widgets.
- * Author: Big Voodoo Interactive
- * Version: 4.2.0
- * Author URI: http://www.bigvoodoo.com
- * GitHub Plugin URI: https://github.com/bigvoodoo/bvi-feeds
- * 
- * @author Christina Gleason <tina@bigvoodoo.com>
- * @author Joey Line
+ * Plugin Name:       BVI Feeds
+ * Plugin URI:        https://github.com/bigvoodoo/bvi-feeds
+ * Author:            Big Voodoo Interactive
+ * Author URI:        https://www.bigvoodoo.com
+ * Description:       Adds client side social media and RSS widgets.
+ * Version:           4.2.1
+ * Requires at least: 6.9
+ * Tested up to:      7.0
+ * Requires PHP:      8.2
+ * License:           GPLv3
+ * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
+ * GitHub Update URI: https://github.com/bigvoodoo/bvi-feeds
+ * Primary Branch:    main
+ * Text Domain:       bvi-feeds
  */
 
 if ( ! function_exists( 'add_action' ) ) {
