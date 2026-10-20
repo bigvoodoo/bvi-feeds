@@ -2,7 +2,7 @@
 Contributors: bigvoodoo, firejdl, geekmenina
 Tags: feeds, rss, admin, shortcode
 Requires at least: 3.5
-Tested up to: 5.6.3
+Tested up to: 7.1.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -36,6 +36,10 @@ License: [GPLv2 or later](http://www.gnu.org/licenses/gpl-2.0.html)
 1. Create widgets!
 
 ## Changelog
+
+### 4.2.2
+
+* Tests against WordPress 7.1.3 and PHP 8.5
 
 ### 4.2.0
 

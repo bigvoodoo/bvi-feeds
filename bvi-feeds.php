@@ -6,9 +6,9 @@
  * Author:            Big Voodoo Interactive
  * Author URI:        https://www.bigvoodoo.com
  * Description:       Adds client side social media and RSS widgets.
- * Version:           4.2.1
+ * Version:           4.2.2
  * Requires at least: 6.9
- * Tested up to:      7.0
+ * Tested up to:      7.1.3
  * Requires PHP:      8.2
  * License:           GPLv3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html
